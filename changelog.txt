@@ -1,0 +1,366 @@
+2023 May 18 - Version 3.0.4
+new: added eraser brush
+new: added a button to expand/collapse overlay controls
+new: it's now possible to paste copied image directly into pixie via ctrl+v shortcut
+new: added addImageFromData method to add image using base64 data
+new: added tools.text.controlsPadding option to override gap size between text and control box
+new: added an option to prevent image added via import tool from being auto selected in editor
+new: added "addImageFromUrl" method for opening image from remote or local url
+new: state exporting/import will now load the full history for current editor
+refactor: "pixie.open" method will now work identically to "pixie.resetEditor" if new configuration is specified
+fix: corner tool default will now use percentages instead of pixels
+fix: don't auto position text with "text.add" method if custom position is provided
+fix: text preventing filters from being applied
+fix: 'onOpen' callback and 'defaultTool' option not working when using 'resetEditor'
+fix: sticker sometimes losing color after dragging
+fix: don't open sticker panel when selecting custom image in editor
+fix: prevent sticker from losing color after loading editor state
+fix: some translation issues
+2022 October 03 - Version 3.0.3
+Enhancements
+Added "Open image" and "Objects" button to example configuration.
+Straight line can now be drawn in draw tool by pressing shiftKey
+Menubar button style can now be changed to "flat", "outline", "raised" or "text" via "buttonVariant" option.
+Menubar button color can now be changed to "primary", "danger", "paper" or "chip" via "buttonColor" option.
+Menubar items can now be sorted by using "position" option.
+Bug Fixes
+Fixed some issues with custom menubar item alignment.
+Menubar items without icon will now display properly.
+Fixed an issue where draw tool would not work properly when opening it with an object selected.
+Toggling history or object panel will now close other open panels.
+2022 March 08 - Version 3.0.2
+Enhancements
+Icons in navbar and menubar now accept url, svg path or react component.
+Overlays and dialogs inside pixie will now have improved positioning.
+Bug Fixes
+Background color picker in new image dialog will now toggle correctly.
+Pixie styling will no longer conflict with bootstrap or styling.
+2022 February 22 - Version 3.0.1
+Bug Fixes
+Initializing via "new Pixie" will work correctly again, same as on pre-3.0.0 versions.
+Add default width and height to rectangle shape.
+2022 February 17 - Version 3.0.0
+Breaking Changes
+Merged pixie .css file into main bundle, it does not need to be imported separately anymore.
+Renamed UMD bundle from "scripts.min.js" to "pixie.umd.js"
+Removed "open", "save" and objects panel toggle buttons from default menubar configuration. These can be re-added via custom configuration, if needed.
+Renamed "defaultTheme" option to "activeTheme". Theme color configuration changed. See here for more details.
+"activeLanguage" and "languages" are now two separate options.
+Replaced google font picker and category selector with flat font list. All fonts (custom ones and google) now need to be specified via configuration.
+"Transform" and "Crop" tools have been merged.
+Removed "Background color" navigation item. Background can now be selected when creating a new canvas.
+"image" option does not accept html image element anymore, only image/state url or raw data string.
+Removed "width" and "height" options. Pixie will inherit the size of the containing element.
+Removed "compact" and "ignoreMobileKeyboard" options.
+Merged "name" and "displayName" option for nav items, and removed "type" option. Nav item "icon" option will now accept react component as well.
+Renamed "toolbar" option to "menubar". Merged "leftItems", "centerItems" and "rightItems" into "items" option. There's an "align" option for menu item now instead.
+Renamed "crop.hideCustomControls" to "crop.allowCustomRatio".
+Removed "ui.zoom.disableMinimumZoom" option.
+Renamed "objectDefault.basicShape" to "objectDefaults.shape".
+New Features
+Fully rewritten pixie in React. This results in many improvements from previous version, including better performance, bundle size reduction by nearly 2x (with bigger reduction in future updates), better animations and many bugfixes.
+Fully redesigned the interface. It's now more neutral and will fit better into existing designs, even without changes to the theme.
+New design is also more responsive and will work better on mobile, tablet and other screen sizes.
+Pixie can now be imported into existing apps as an ES module.
+2021 April 10 - Version 2.2.3
+Enhancements
+Improved the appearance of crop and object controls.
+Frame will now be re-applied after crop, instead of crop affecting frame itself.
+Controls will now be visible even if they are outside the bounds of canvas.
+It's now possible to select and change style (color, font, size etc.) for specific letters of text.
+Resizing text via corner handles will now increase/decrease font size instead of scaling text itself.
+Added font size input in text options panel.
+Added undo/redo keybinds (ctrl + z and ctrl + shift + z)
+Font selector panel will no longer cover selected text, if there's enough space to position it side by side.
+Common actions (duplicate, flip, bring to front, delete) will now appear in a floating panel above objects.
+Text editing border will now match accent color of currently active theme.
+Drawings made in free drawing mode can now be moved same as regular objects.
+Navigation can now be hidden completely by setting "ui.nav.position" to null or "none"
+Transforms will now work without having image background.
+Improved design of free rotation slider.
+Angle slider will now scale the background image so there are no gaps on canvas when using free rotation.
+Bug Fixes
+Fixed an issue where sometimes style or font would not be changeable for selected text.
+Fixed several issues with crop UI rendering.
+Fixed an issue where font changes on accented characters sometimes would not be reflected in realtime.
+Keybinds will now only be executed when pixie has focus.
+Objects will now be rotated properly relative to their old position on canvas in transform panel.
+Objects panel will now properly sync when undoing and redoing.
+Prevent empty canvas from being added as "initial" history item.
+Fixed an issue with toolbar not rendering properly on mobile.
+Make sure "loading" image animation is played properly after editor is hidden and shown again.
+Fixed an issue where zoom might not be set correctly after "resetAndOpenEditor" call.
+Don't show blank canvas after "resetAndOpenEditor" call if previous image was removed.
+Prevent zoom from going into negative values.
+Fixed an issue where frames would have gapes on certain frame size or if corner image width/height was not equal.
+Fixed an issue where tool name might not get translated sometimes on mobile.
+Fixed some visual issues in text drawer on mobile.
+Fixed an issue where merge tool would leave a small white gap sometimes.
+Changing default aspect ratio via API while crop drawer is open will now work properly.
+Changes
+Removed object.selected event, use selection.created instead.
+Removed old object control related configuration (hasRotatingPoint, lockScaling etc.), use new configuration from here instead.
+2020 June 10 - Version 2.2.2
+New Features
+Toolbar items can now be fully overwritten via configuration.
+Loading indicator will now be shown while image or state is loading.
+Enhancements
+Minimum zoom can now be disabled via "tools.zoom.disableMinimumZoom" option.
+Minimum and maximum zoom will now be set more accurately for initial image.
+Default brush sizes can now be overwritten.
+Shapes will now have more descriptive names in objects panel (for example "arrow" instead of "shape").
+Use "tools.import.validExtensions" in browser file upload dialog.
+History items after current pointer will now be discarded when adding new history items.
+Large image will no longer flicker in full size when opening pixie via button click.
+Canvas, overlay and main image, objects and history panels will now animate when being opened/closed.
+Custom action can now be specified for when user clicks on sample image.
+Bug Fixes
+Editor keybinds will no longer be registered multiple times
+Fixed a few issues with translations.
+Overlay mode will now work properly in safari browser.
+Loading state in "onLoad" callback will now work properly.
+Sample image dialog window will now properly open again after calling "pixie.resetEditor".
+Specified theme colors will now override defaults properly.
+Hide sample images row and separator if no sample images are provided.
+Fixed an issue where floating object controls would not show on some screen sizes.
+Prevent editor flicker on page load when visibility is set to hidden.
+Fixed a few issues with drawing brushes.
+Setting "crop.defaultRatio" as null will now correctly make cropzone fully resizable.
+Make css selectors more specific to avoid collision with other libraries.
+Fixed an issue where text was sometimes not selectable after importing pixie state.
+Several other smaller bug fixes.
+2020 January 19 - Version 2.2.0
+New Features
+Added "notify" method for showing notification messages to user.
+Overlay images can now be replaced from object settings panel.
+Image or state file can now be dragged and dropped from desktop to the editor directly.
+Added new "state" option for loading state file directly without needing to call "pixie.loadState()" method.
+Enhancements
+"Open sample" panel now supports variable number of samples.
+"Open sample" now supports state files (.json) as well as regular images.
+Automatically close export panel after image is downloaded.
+Fitting image to screen automatically can now be disabled via "tools.zoom.fitToScreen" option.
+History and objects buttons can now be removed from toolbar via configuration.
+Custom icons and images can now be used for navigation items.
+"onFileOpen" callback will now specify whether file was state, overlay or background image via second function argument.
+Added "applyChanges" method to API. It will mimic functionality of pixie "Apply" button.
+Added "openPanel" method to API. It will open specified editor panel.
+Added "tools.ui.fitOverlayToScreen" option to prevent opened overlay image from being resized to fit the screen automatically.
+Added "isDirty" method for checking whether there currently are any unsaved changes.
+Added "loadStateFromUrl" method for loading .json file directly from specified url.
+Clicking on "add text" button will now automatically focus and select sample text so user can immediately type replacement text.
+"getState" method now accepts a list of custom properties to include in exported state file.
+Active object will now be deselected when clicking outside the canvas.
+"addSticker" method now accepts category name.
+Canvas area will now extend to fit available screen when navigation is hidden.
+Mobile virtual keyboard will no longer cause editor to resize.
+Brush preview images on dark mode will now have better contrast.
+Object defaults can now be specified separately for text, shapes, stickers or globally for all objects.
+Min and max height and width can now be specified for resize tool.
+Display names can now be specified for crop presets along with ratio.
+Bug Fixes
+Improved crop drawer responsiveness on smaller screen sizes.
+Fixed a few issues with frame rendering.
+Fixed an issue where canvas with cross-origin images would not save sometimes.
+Crop tool will now correctly round numbers to nearest pixel.
+"crop.defaultRatio" setting will now correctly apply default ratio to initial cropzone.
+Transform panel "cancel" button will now discard changes as expected.
+"resetEditor" method will now correctly reset filter panel state.
+Loading state via API before initializing editor first will now work properly.
+Default sample images can now be overwritten.
+Fixed several issues with zooming.
+Default brush sizes and types will now be correctly removed when "replaceDefault" is set to "true".
+Fixed precision issue with "maintain aspect ratio" option in resize tool.
+Prevent image from zooming out too much on mobile.
+Prevent cropzone from losing aspect ration when dragging against canvas edge.
+Update cropzone width and height input values when cropzone is being scaled via corners.
+.svg images imported as overlay will now work properly.
+"objectDefaults.fontFamily" option will now work properly if google font is selected as default font.
+Older version .json state files will now load properly.
+Fixed an issue where image would sometimes not be visible after loading state until user clicked on the editor.
+Font panel search will now properly find fonts when using lowercase or uppercase letters.
+Fixed an issue where custom font would not get loaded with editor state sometimes.
+Fixed a few issues with adding custom filters.
+navigation will now be hidden on mobile when "ui.nav.position" is set to "none".
+Fixed an issue where "baseUrl" option would not be applied to urls sometimes.
+"circle" and "spray" brushes will now get correctly removed when clicking "cancel" button.
+2019 February 11 - Version 2.1.3
+Bug Fixes
+Sample images should now correctly use specified "baseUrl".
+Corrected an issue with custom fonts sometimes not loading.
+Keyboard arrows in inputs will now properly work if pixie is not focused.
+2019 February 08 - Version 2.1.2
+New Features
+Added export panel for selecting image format, quality and name. Enable with "ui.enableExportPanel" option.
+Added "duplicate" button to object controls.
+Enhancements
+Font picker panel will now display properly on all screen sizes.
+Cropzone can now be configured via "crop.cropzone" option.
+Editor closing can now be prevented by returning "false" from "onClose" callback.
+Improved object reordering via drag and drop.
+Default export format, name and quality can now be changed dynamically.
+Pixie will no longer apply any global css styles to the page.
+Added "ui.visible" option to control whether pixie should be automatically opened.
+Default object properties (fill, background, textAlign etc) can now be specified via "objectDefaults" option.
+Compact mode will not be triggered on tablets anymore.
+Filters that should be shown can now be specified via "tools.filter.items" configuration option.
+Added "onMainImageLoaded" callback that is executed every time main background image is fully loaded.
+Default text for text tool can now be specified via "tools.text.defaultText" configuration option.
+Crop ratio that should be selected by default can now be specified via "tools.crop.defaultRatio" option.
+Bug Fixes
+Canvas panning should now work properly after reloading editor state.
+Drawing will no longer cause canvas pan.
+Fixed an issue with cropping sometimes causing blank canvas to appear instead of image.
+Options for hiding open, close and save buttons will now work properly in compact mode.
+Google fonts panel will now be scrollable on smaller screens.
+Prevent navigation items from overlapping on narrow screen size on Edge browser.
+Hiding open, close and save buttons will no longer affect toolbar layout.
+Frames should now have correct dimensions when loading editor state.
+Text font and color can now be properly pre-selected before adding text.
+Moving object with keyboard arrows will no longer cause page to scroll.
+Text edit box will now always match text size after loading editor state.
+Images with extension in uppercase letters will now be accepted.
+IE should now have properly styled scrollbars.
+2018 October 08 - Version 2.1.1
+Bug Fixes
+Show correct error message if user uploaded image is larger when "max_size" specified via config.
+Correct keyboard arrows and "delete" button keybinds.
+Fix an issue with color sometimes not being applied to stickers properly.
+2018 September 28 - Version 2.1.0
+Enhancements
+Add "crossOrigin" option for loading external images with cross origin support.
+Add option to hide custom crop ratio controls.
+Add option to prevent editor close when using "onClose" callback.
+Add option to override default color presets.
+Add "onFileOpen" callback that is executed every time user loads new file into editor.
+Bug Fixes
+Don't open multiple sample image dialogs when using pixie.open() and pixie.close().
+Show google fonts on subsequent fonts panel opens.
+Prefix pixie "modal" class to prevent issues with other libraries and frameworks.
+"saveUrl" parameter will now work properly.
+Prevent issues if there are multiple canvas elements on the page.
+Add drawings to "objects" panel properly.
+Remove previous image and blank canvas size when using "pixie.resetEditor()"
+Properly remove frames from canvas when clicking on frame "remove" button.
+Make tooltips translatable.
+2018 May 21 - Version 2.0.9
+Enhancements
+Improvements to responsiveness of the editor.
+Added "set" method to activeObjectTool for changing object properties.
+Added "objects" tool for controlling objects on the canvas via API.
+Bug Fixes
+Fixed several issues that occurred when default export format was set to json.
+2018 May 21 - Version 2.0.8
+Enhancements
+Improved secondary controls visibility on mobile.
+Improved toolbar resizing on mobile mode.
+Added pixie.resetAndOpenEditor(config) method.
+Added activeObject tool for changing options of selected object (color, background, opacity etc).
+textTool.add('text', options) now accepts options for specifying text color, opacity, size etc.
+Zoom can now be disabled via ui.allowZoom option.
+Bug Fixes
+Fixed dark theme background issue.
+Don't delete edited text when pressing "delete" key.
+Create initial history item when using pixie.resetEditor with configuration.
+Make pixie.open() work properly when used outside onLoad callback.
+2018 May 19 - Version 2.0.7
+Enhancements
+Custom selector can now be specified via pixie configuration.
+Pixie configuration can now be passed to pixie.open(config) andpixie.resetEditor(config)directly.
+Added pixie.openEditorWithImage('image.png') method for opening editor with specified image in one call.
+Bug Fixes
+Files with extensions in uppercase letters will now work properly.
+Fixed some issues with loading initial editor state.
+Fixed notification positioning in overlay mode.
+Fixed an issue with pixie.openMainImage() method opening overlay image.
+Background images will now be loaded fromurls specified via config.
+2018 May 15 - Version 2.0.6
+Enhancements
+Watermark tool can now be used manually via pixie.getTool('watermark').add('My Watermark');
+Fit image to available space when opening pixie in overlay mode.
+Added pixie.resetEditor() method for completely resetting the editor.
+Bug Fixes
+Fixed some issues on IE11.
+Open image overlay should now be fully translatable.
+"onOpen" callback will now be fired properly.
+Editor will now be properly closed when calling pixie.close();
+Fixed some issues preventing manual source code compilation.
+Removed box-sizing css from body and html elements.
+2018 May 11 - Version 2.0.5
+Enhancements
+It's now possible to specify custom action for "open" button via "ui.toolbar.openButtonAction" option.
+Open dropdown menu items should now be translatable.
+Improved watermark visibility.
+Navigate back to main stickers drawer on "close" button click inside specific stickers category.
+Bug Fixes
+Fixed an issue with specified nav items being appended even if "replaceDefault" is set to true.
+2018 May 10 - Version 2.0.4
+New Features
+Added new upload image dialog that will be shown if no image, state or canvas size is specified.
+Added new dropdown menu with options to open overlay/background image and state files.
+Enhancements
+Drag and drop in objects panel should be less "jumpy" now.
+Filter files in upload dialog to image and json only.
+Lowered slider max values in object shadow settings panel.
+Improved back button color when using dark theme.
+Changed default shadow color and offset.
+Don't auto close shapes and stickers panels when sticker is added.
+Opening new background image will no longer reset editor state.
+"Close" editor button can now be shown even if editor is not in "overlay" mode.
+Bug Fixes
+Fixed text shadow and line height settings.
+Fixed object settings "close" button.
+Filter options panel should now be translatable.
+2018 May 09 - Version 2.0.3
+Bug Fixes
+Fixed several issues with translations.
+Fixed some issues with cropping after canvas has been transformed.
+Opening new image or state file will now correctly reset editor history.
+Enhancements
+Objects will now be ordered according to their z-index in objects panel.
+Objects can now be re-ordered via drag and drop in objects panel.
+Active object will now be highlighted in objects panel.
+Darkened "stars" and "clouds" stickers buttons so previews are more visible.
+Added opacity setting to object controls panel.
+Added ui.toolbar.openButtonImportsMainImage option for controlling how image is opened via toolbar "open" button.
+2018 May 07 - Version 2.0.2
+Bug Fixes
+Import tool should now work properly.
+Added config option for valid image extensions.
+Enhancements
+Added config option for valid image extensions.
+Added config option for specifying default image name, format and quality when saving.
+2018 May 07 - Version 2.0.1
+Bug Fixes
+Corrected color picker panel positioning.
+Corrected add text button positioning.
+Json will no longer be default format for saving.
+Text options icon will now be properly visible.
+Fixed text options panel apply and cancel buttons.
+Remove most of pixie css styles from body and html tags.
+2018 May 06 - Version 2.0
+New Features
+Full support for mobile and tablets.
+Completely reworked integration functionality to be much more flexible.
+Added a number of new filters.
+New design based on google material design.
+Added dark and light themes.
+Added photo frames functionality.
+Added a lot of new config options for customizing the editor.
+Full support for translations.
+Shapes, stickers, brushes, filters, fonts etc can now easily be added, removed or modified.
+Added panning functionality on both desktop and mobile.
+All tools (resize, crop, frame, text etc) can now be used without showing pixie interface.
+Navigation items can now be specified via configuration.
+Color presets can now be specified via configuration.
+Resize/rotate handles and object border styles can now be modified via configuration.
+Enhancements
+Improved undo/redo functionality.
+Objects added to canvas will now be properly resized and positioned.
+Added support for zooming via mouse wheel and pinch gesture.
+Improved support for saving and loading large photos.
+Text tool now supports accented characters and emoticons.
+Saved state will now properly preserve things like active fonts and frames.
+Filters now use WebGL for improved performance.
+Uptated underlying libraries to latest versions.
+Added support for retina scaling.
