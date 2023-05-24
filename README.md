@@ -1,8 +1,8 @@
 # Pixly ([Click to try 🚀](https://pixly.tk/)) (v3.0.4)
 
-🔗 BioX is a powerful biolink generator and URL shortener, perfect for creating concise and impactful bio descriptions across various platforms. 📝🔗✂️
+Pixly is a ✨powerful✨ and 🐉friendly🐉 tool for 🧪creating🧪 and 🎨editing🎨 images. It's easy to use and has a lot of features, making it perfect for both beginners and experienced users.
 
-## **[Changelog 📝](https://github.com/linkspreed/Pixly/blob/main/changelog.md)** **Check out the full Pixly changelog**
+## **[Changelog ✨](https://github.com/linkspreed/Pixly/blob/main/changelog.md)** **Check out the full Pixly changelog**
 ## **[Special Works 👨‍💻](https://github.com/linkspreed/Pixly/blob/main/Special_Works.md)** **Take a look at what changes we are doing to Pixly besides development**
 
 
@@ -13,50 +13,38 @@
 
 ## Features
 
-- **Biolinks** – Create link in bio pages in seconds. Manage content effortlessly using simple drag-and-drop editor. Customize backgrounds, colors, fonts, button styles and other appearance settings using visual editor.
-- **Biolink Widgets** – Add links, images, text, youtube, soundcloud, spotify, tiktok, twitch embeds and more.
-- **Workspaces / Teams** – Create multiple workspaces and invite team members to collaborate on campaigns, links, custom domains and more.
-- **Link Rotators** – Put multiple links into a group and use the short link for the group to redirect user to a random link from that group.
-- **Editable Homepage** – Default landing page can be easily edited via built-in appearance editor with live preview and no coding knowledge.
-- **(Optional) SaaS mode** – Earn money with built in premium subscription system. Create different plans for users to subscribe to and control what functionality and limitations each plan has. Paypal and Stripe integration is fully built-in.
-- **High Performance** – BeLink is lightweight and has lighting fast performance and page load time out of the box.
-- **API** – Fully featured rest API allows performing any action that is possible on the website via REST api. Interactive API documentation is also included.
-- **Link Statistics** – Link reports allow users to see many statistics about their links including date and count of clicks, countries, referrers, devices, browsers and more.
-- **Link Groups** – Group multiple links together to allow viewing statistics for all links in that group and see how different groups perform when compared to each other.
-- **Link Sharing** – Share shortened urls on facebook or twitter with a single click from user dashboard or link frame/splash pages.
-QR Code – Generate and copy a fully functional shortened url QR code with a single click. Scanning QR code will redirect to long url.
-- **Custom Domains** – Users can attach custom domains and sub-domains so their short links will use their own site url. Domain different then main site url can also be set as default by admin.
-- **Link Overlays** – Link overlay redirect type will show a fully customizable overlay over destination website .
-- **Link Custom Pages** – Create fully custom html pages with built-in WYSIWYG editor that can be shown to user before redirecting them to destination url.
-- **Link Splash Pages** – Splash pages with information about destination url and optional ads can be shown to user before redirecting them to destination url.
-- **Schedules** – Links can be schedules to automatically become available and/or expire at specific date and time. Links can also be set to expire after specific amount of clicks/visits.
-- **Custom Link ID** – Links can have custom human-readable short IDs, instead of random generated strings.
-- **Link Metadata** – Each link can have metadata, including tags, title and description. This allows easier management of links as well as customization for link page SEO tags.
-- **Password Protection** – Links can be protected so only users with password will be redirect to destination url.
-- **URL Validation** – URLs can be automatically validated against custom blacklist of domains and keywords or using Google safe browsing API and Phishtank API.
-- **Tracking Pixels** – Tracking pixels from various services can be attached to links to measure their performance.
-Location and Device Targeting- Links can be redirecting to different destination url based on user device (mobile, desktop etc) or their location.
-- **Multiple URL Shortening** – Easily shorten multiple urls with one click.
-- **Permissions and Roles** – Use fully featured permission and role system to allow (or disallow) users, subscription plans or guests to peform specific action accross the site.
-- **Appearance Editor** – Site appearance can be easily changed without any coding knowledge via built-in editor with live preview.
-- **Dark Mode** – BeLink comes with pre-built light and dark themes. You can fully customize them or add new themes via appearance editor.
-- **Custom Pages** – Custom pages (for example terms of service, about us etc) can be created using built-in WISIWYG editor.
-- **Menu Editor** – All the menus accross the site can be easily edited via drag and drop without any coding knowledge.
-- **Translations** – BeLink is fully translation ready and can be easily translated to any language from admin area.
-- **Custom Code** – Custom code can be added directly from appearance editor without the need to modify any files.
-- **In-Depth Documentation** – BeLink comes with in depth documentation that explains everything from installation to usage of all the features.
-- **SEO Editor** – SEO tags for all pages can be modified directly from appearance editor in admin area.
-- **Authentication** – Fully featured authentication system including social login, recaptcha protection, option to completely disable registration and more.
-- **Contact Page** – Allow users to contact you easily with questions via built in contact us page.
-- **Integrated Ads** – 6 integrated ad slots. All you need to do is paste your ad codes in admin area and BeLink will display your ads in the corresponding slot on the site.
-- **Modern Design** – BeLink features a clean, modern, professional design based on google material design specification.
-- **Settings** – There are many settings that allow you to enable or disable functionality across the site, fine tune how links work, configure various date and time formats and much more.
-- **Google Analytics** – Google analytics are fully integrated, all you need to do is enter your tracking code.
-- **Multiple Homepages** – Choose between multiple homepages including default landing page, login page or your own custom html page.
+- **Integration** – Easily integrate pixie into any existing project or application.
+- **Extensible** – Pixie interface and API can be extended with new functionality.
+- **Mobile** – Pixie has full mobile support and adapts its interface to fit size of any device automatically.
+- **Theming** – Easily change all editor colors to match it to your existing site or application design.
+- **Customizable UI** – Customize UI by showing, hiding or adding new menu items, changing toolbar positions or using a different theme.
+- **Translatable** – Pixie’s interface is fully translatable via configuration.
+- **Watermark** – Saved photos can be easily watermarked with specified text.
+- **Modes** – Choose between overlay(modal), inline or full screen modes.
+- **Tools API** – Use all pixie tools (resize, crop, frame etc) via API without opening pixie interface.
+- **Customizable Tools** – All tools are fully customizable, you can remove or modify and add custom stickers, shapes, fonts, frames and more.
+- **Saving State** – Save current editor state in json format, allowing for functionality like pre-built templates.
+- **Loading State** – Load previously saved state including images and all changes that were made.
+- **Photo Manipulation** – Resize, crop, transform and more via interface or API.
+- **Filters** – Pixie comes with many built in filters like grayscale, blur, black & white, vintage and more. More filters can be added via API..
+- **Frame** – Add built-in responsive frames to photo of any size or add your own frames.
+- **Crop** – Crop photo to one of specified aspect ratios or let user select custom crop zone via UI.
+- **Draw** – Powerful free drawing tool supports both mouse and touch, has multiple brush types, colors and more.
+- **Text** – Full support for adding text to images. Several hundred of google fonts can be used or only custom added fonts.
+- **Shapes** – Custom shapes can be easily added by simply specifying svg image path.
+- **Stickers** – Custom stickers can be added or removed. Any type of image can be used as a sticker.
+- **Corners** – Image corners can be rounded with one simple click or API call.
+- **Empty canvas** – Pixie does not have to edit existing photo, custom images can easily be created from scratch as well.
+- **History** – All editor actions are non destructive and can be easily undone and redone via history tool.
+- **Objects** – All objects like stickers, shapes and text are on their own layer and can be easily moved, resized, deleted and modified by changing their color, adding shadow, background and more.
+- **Patterns and Gradients** – All objects can be filled in with many built in or custom patterns and gradients.
+- **Saving** – Modified image can be easily saved on local device or on the server via API or interface..
+- **Zoom & Pan** – Canvas can be zoomed and panned using mouse, mouse wheel, or touch and pinch gestures on mobile devices.
+- **HTML5** – Pixie uses native HTML5, which means it works on every device.
 
 ## More
  
-BioX is **free**, **real-time** and with **unlimited** resources 
+Pixly is **free**, **real-time** and with **unlimited** resources 
 for developers around the world.
 
 Our focus is on **usability** and **security** 
@@ -67,7 +55,7 @@ for our developers, users and anyone who comes into contact with ([Linkspreed �
     is developed properly so that 
     the platform works as well as possible.
 ```
- You can enjoy BioX freely and use all features to an unlimited extent.
+ You can enjoy Pixly freely and use all features to an unlimited extent.
 
 ## 📷 UI
 
