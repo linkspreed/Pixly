@@ -60,17 +60,8 @@ for our developers, users and anyone who comes into contact with ([Linkspreed ðŸ
 ## ðŸ“· UI
 
 
-### Create Click-Worthy Links
-<img align="center" alt="BioX" width="3000px" src="https://github.com/linkspreed/BioX/assets/102324985/d80d34f1-9f23-4cdb-9de6-e16f4493a33e" draggable="false" />
+### Start you journey
+<img align="center" alt="BioX" width="3000px" src="https://github.com/linkspreed/Pixly/assets/102324985/509c528f-ac00-474e-ac0a-193279d1482a" draggable="false" />
 
-### Work together
-<img align="center" alt="BioX" width="3000px" src="https://github.com/linkspreed/BioX/assets/102324985/fe91a9c3-1ba7-4edf-afdd-b026c6ea6f20" draggable="false" />
-
-### The only link you'll ever need
-<img align="center" alt="BioX" width="3000px" src="https://github.com/linkspreed/BioX/assets/102324985/48ad3850-8b49-47fc-8d2b-bc08b14de3f8" draggable="false" />
-
-### Monitor your link performance
-<img align="center" alt="BioX" width="3000px" src="https://github.com/linkspreed/BioX/assets/102324985/bb514309-53ae-46e5-9d24-445a6bb0a370" draggable="false" />
-
-### Manage your links
-<img align="center" alt="BioX" width="3000px" src="https://github.com/linkspreed/BioX/assets/102324985/c9004916-ab2e-4827-886a-8e0dab2d975f" draggable="false" />
+### Work with your images ...
+<img align="center" alt="BioX" width="3000px" src="https://github.com/linkspreed/Pixly/assets/102324985/e92384d7-8f4c-4d16-be08-72d4f1540904" draggable="false" />
