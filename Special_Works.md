@@ -1,3 +1,6 @@
+### 23.06.2023 (announcement Pixly)
+- 🎉 Exciting news! We've just added Pixly to our subdomain system 🌟👏 Visit https://pixly.tk and get redirected to https://pixly.linkspreed.com without losing any data 🤩 Have you tried out our new platform yet? Let us know in the comments! #Pixly #Linkspreed #Subdomain #Upgrade
+
 ### 24.05.2023 (announcement Pixly)
 - We've just released Pixly v3.0.4, a major update with a new user interface, improved performance, and new tools for editing photos. ✨
 https://github.com/linkspreed/Pixly
